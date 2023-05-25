@@ -1,0 +1,21 @@
+<div style="margin-top: 50px;" >
+    <p>reader-pdf works!</p>
+    <button style="background-color: tomato; border-color: brown; color: #fff; padding: 5px 10px;" (click)="buttonClick()" >Click on me!</button>
+    <button style="background-color: tomato; border-color: brown; color: #fff; padding: 5px 10px;" (click)="buttonClick2()" >Click on me 2!</button>
+    <canvas #pdfViewer></canvas>
+    <div>
+        <!-- <ngx-extended-pdf-viewer [pdfSrc]="pdfBase64"></ngx-extended-pdf-viewer> -->
+
+    </div>
+</div>
+<div *ngIf="showMeThis">
+    <ngx-extended-pdf-viewer
+    [base64Src]="pdfBase64"
+    backgroundColor="#f0f0ff"
+    [height]="'90vh'"
+    [useBrowserLocale]="true"
+    [handTool]="false"
+    [showHandToolButton]="true"
+  >
+  </ngx-extended-pdf-viewer>
+</div>
